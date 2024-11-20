@@ -1,0 +1,380 @@
+/* Core Styles */
+:root {
+  --theme-color: #00ff9d;
+  --dark-bg: #2a2a2a;
+  --night-black: #1f1f1f;
+  --text-white: #ffffff;
+  --transition-fast: 0.3s ease;
+  --box-shadow: 0 0 10px rgba(0, 255, 157, 0.5);
+}
+.blog-content {
+  font-size: 1.1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Updated content box styles */
+.KEBALKB__contentBox {
+  width: 100%;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 0 20px;
+}
+
+.max-w-content {
+  max-width: 1000px !important;
+  margin: 0 auto !important;
+  width: 100%;
+}
+
+.px-5 {
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+}
+
+.xl\:max-2xl\:max-w-50rem {
+  max-width: 100% !important;
+  margin: 0 auto !important;
+}
+
+.relative.mx-auto {
+  position: relative;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Background Lines Enhancement */
+.bg-lines {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  width: min(100%, 1400px);
+  margin-inline: auto;
+  padding: 0 1rem;
+}
+
+.line-wrapper {
+  max-width: 1130px;
+  width: 100%;
+  height: 100%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: clamp(1rem, 2vw, 2rem); /* Responsive spacing */
+  padding-inline: 2rem;
+}
+
+.line-wrapper > div {
+  width: 1px;
+  height: 100%;
+  border-right: 1px dashed var(--border-color, #e2e8f0);
+  position: relative;
+}
+
+.line-wrapper > div::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: var(--theme-color);
+  transform: rotate(45deg);
+  left: -4px;
+}
+
+/* Line Animation Variations */
+.line1::before {
+  animation: topToBottom 10s infinite;
+}
+.line2::before {
+  bottom: 0;
+  animation: bottomToTop 10s infinite;
+  animation-delay: 0.5s;
+}
+.line3::before {
+  animation: topToBottom 10s infinite;
+  animation-delay: 2.5s;
+}
+.line4::before {
+  bottom: 0;
+  animation: bottomToTop 10s infinite;
+  animation-delay: 4.5s;
+}
+.line5::before {
+  animation: topToBottom 10s infinite;
+  animation-delay: 6.5s;
+}
+.line6::before {
+  bottom: 0;
+  animation: bottomToTop 10s infinite;
+  animation-delay: 8.5s;
+}
+.line7::before {
+  animation: topToBottom 10s infinite;
+  animation-delay: 10s;
+}
+
+/* Back Button Enhancement */
+.back-button {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  background-color: var(--dark-bg);
+  color: var(--text-white);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  border: 2px solid transparent;
+  font-size: 1.25rem;
+  transition: var(--transition-fast);
+  z-index: 100;
+}
+
+.back-button:hover {
+  transform: translateX(-5px);
+  background-color: var(--night-black);
+  border-color: var(--theme-color);
+  box-shadow: var(--box-shadow);
+}
+
+/* Dark Mode Enhancements */
+.dark .line-wrapper > div {
+  border-color: var(--dark-border-color, #333);
+}
+
+/* image carousel style */
+.carousel-image {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-image.active {
+  display: block;
+  opacity: 1;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  width: 15px;
+  border-radius: 5px;
+  background-color: var(--theme-color);
+}
+
+/* Base styles for navigation buttons */
+.nav-btn {
+  width: 40px;
+  height: 40px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+/* Desktop positioning and image size */
+@media (min-width: 768px) {
+  .nav-btn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .prev-btn {
+    left: 20px;
+  }
+
+  .next-btn {
+    right: 20px;
+  }
+
+  .carousel-image {
+    width: 80% !important; /* Restore desktop image width to 80% */
+  }
+}
+
+/* Mobile positioning */
+@media (max-width: 767px) {
+  .carousel-container {
+    position: relative;
+    padding: 0 45px; /* Add padding to container to make space for buttons */
+  }
+
+  .prev-btn {
+    left: 2px;
+  }
+
+  .next-btn {
+    right: 2px;
+  }
+
+  /* Adjust image width for mobile to account for button space */
+  .carousel-image {
+    width: 100% !important;
+  }
+}
+
+/* Hover effects */
+.nav-btn:hover {
+  transform: translateY(-50%) scale(1.1);
+  background-color: rgba(0, 0, 0, 0.7);
+  border-color: var(--theme-color);
+  box-shadow: var(--box-shadow);
+}
+
+.nav-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/*skill style */
+
+.skills-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.skills-header {
+  margin-bottom: 2rem;
+}
+
+.skills-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.skills-description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.skills-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.skill-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.skill-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 1rem;
+  padding: 8px;
+  border-radius: 8px;
+  background: #f5f5f5;
+}
+
+.skill-name {
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.progress-container {
+  background: #f5f5f5;
+  border-radius: 99px;
+  height: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 99px;
+  transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 0;
+}
+
+.skill-percentage {
+  position: absolute;
+  right: 0;
+  top: -1.5rem;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  .skills-title {
+    color: #fff;
+  }
+
+  .skills-description {
+    color: #a0a0a0;
+  }
+
+  .skill-card {
+    background: #1f1f1f;
+  }
+
+  .skill-icon {
+    background: #2d2d2d;
+  }
+
+  .skill-name {
+    color: #fff;
+  }
+
+  .progress-container {
+    background: #2d2d2d;
+  }
+}
