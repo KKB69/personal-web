@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Project Details Page" />
+    <title>Project Details</title>
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="../../assets/img/circle.png"
+      type="image/png"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../assets/css/fontAwesome5Pro.css" />
+    <link rel="stylesheet" href="../../assets/css/cdheadline.css" />
+    <link rel="stylesheet" href="../../assets/css/style.min.css" />
+    <link rel="stylesheet" href="../../assets/css/project.css" />
+    
+
+    <style>
+      /* Button Container for Centering */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem; /* Spacing above the button */
+  margin-bottom: 3rem; /* Spacing below the button */
+}
+
+/* Play Game Button Styling */
+.play-game-button {
+  color: #00ff9d; /* Vibrant green text */
+  font-size: 1.25rem; /* Text size */
+  font-weight: 600; /* Slightly bold font */
+  padding: 12px 32px; /* Padding for a clean, clickable button */
+  border: 2px solid #00ff9d; /* Green border */
+  border-radius: 8px; /* Rounded corners */
+  background-color: transparent; /* Transparent background initially */
+  text-decoration: none; /* Remove underline */
+  text-align: center; /* Center the text */
+  position: relative;
+  display: inline-block;
+  font-family: 'Poppins', sans-serif; /* Clean, modern font */
+  letter-spacing: 1px; /* Slight spacing between letters */
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+/* Hover Effect for the Button */
+.play-game-button:hover {
+  color: white; /* White text on hover */
+  background-color: #00ff9d; /* Green background on hover */
+  text-shadow: 0 0 5px #000, 0 0 10px #000; /* Subtle black stroke around text */
+  border-color: #00cc85; /* Darker green border on hover */
+  transform: translateY(-4px); /* Subtle lift effect */
+}
+
+/* Responsive Design for Mobile and Small Screens */
+@media (max-width: 768px) {
+  .play-game-button {
+    font-size: 1.125rem; /* Smaller text on mobile */
+    padding: 10px 28px; /* Adjust padding for smaller screens */
+  }
+}
+
+    </style>
+    
+  </head>
+  <body>
+    <!-- Header with Back Button -->
+    <header>
+      <a href="../more projects.html" class="back-button">←</a>
+    </header>
+
+
+<!-- only changes between these lines dont changes above or below them __________________________________________________________________________________________________________________________________________________________________________________________-->
+    <!-- Main Content -->
+    <main class="KEBALKB__contentBox relative mx-auto">
+      <div class="py-3.5 max-w-content xl:max-2xl:max-w-50rem max-xl:mx-auto">
+        <!-- Project Details Card -->
+        <div
+          class="px-5 py-8 md:p-8 bg-white dark:bg-nightBlack rounded-2xl lg:p-10 2xl:p-13"
+        >
+          <div
+            class="px-5 py-8 md:p-8 bg-white dark:bg-nightBlack rounded-2xl lg:p-10 2xl:p-13"
+          >
+          <div
+          class="inline-flex items-center gap-2 px-4 py-2 text-xs tracking-wide text-black dark:text-white border lg:px-5 section-name border-platinum dark:border-greyBlack200 rounded-4xl"
+        >
+          <i class="fas fa-gamepad text-theme"></i>
+          Simple Arcade Game
+        </div>
+
+            <h2
+              class="text-2xl font-semibold leading-normal text-black dark:text-white mt-7 lg:mt-10 article-title lg:text-3xl lg:leading-normal"
+              style="font-size: 2.5em"
+            >
+              Pro Catcher: Master the Art of Catching
+            </h2>
+            <p style="font-size: 1.2em;">
+                Catch fast, score high, and become the ultimate Pro Catcher champion!
+              </p>
+
+  <!-- Image Carousel Container -->
+  <div class="mb-4 overflow-hidden mt-7 xl:my-8 thumb rounded-xl xl:rounded-2xl relative">
+    <!-- Image Container -->
+    <div class="carousel-container">
+      <!-- Images -->
+      <img 
+        src="../project assets/catcher.png" 
+        alt="Blog Thumbnail Image 1" 
+        class="carousel-image active"
+        style="margin: 0 auto; border-radius: 15px"
+      />
+      <img 
+        src="../project assets/catcher2.png" 
+        alt="Blog Thumbnail Image 2" 
+        class="carousel-image"
+        style="margin: 0 auto; border-radius: 15px"
+      />
+      <img 
+        src="../project assets/catcher3.png" 
+        alt="Blog Thumbnail Image 3" 
+        class="carousel-image"
+        style="margin: 0 auto; border-radius: 15px"
+      />
+  
+      <!-- Image Indicators -->
+      <div class="carousel-indicators">
+        <span class="indicator active"></span>
+        <span class="indicator"></span>
+        <span class="indicator"></span>
+      </div>
+  
+      <!-- Navigation Buttons -->
+      <button class="nav-btn prev-btn" onclick="changeImage(-1)">&lt;</button>
+      <button class="nav-btn next-btn" onclick="changeImage(1)">&gt;</button>
+    </div>
+  </div>
+
+  <!-- Rest of your content -->
+  <div class="post-meta sm:flex items-center justify-between my-8 mb-10 max-sm:space-y-3.5">
+    <div>
+      <h6 class="text-black dark:text-white">PESENTED BY</h6>
+      <p class="text-regular">Kebal Kishor Bastola</p>
+    </div>
+    <div>
+      <h6 class="text-black dark:text-white">CATEGORY:</h6>
+      <p class="text-regular">Arcade Game</p>
+    </div>
+    <div>
+      <h6 class="text-black dark:text-white">DURATION</h6>
+      <p class="text-regular">1 week</p>
+    </div>
+  </div>
+
+
+<!-- Button to Play the Game -->
+<div class="button-container">
+  <a href="https://procatcher.vercel.app/
+  " class="play-game-button">
+    Click Here to Play Game!
+  </a>
+</div>
+
+<!-------projects content starts here------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+            <div class="blog-content">
+              <h3
+                class="mb-3 text-lg font-medium text-black dark:text-white xl:text-2xl" style="color: #00ff9d;font-size: 1.8em;"
+              >
+                Project Overview
+              </h3>
+              <p>
+                <strong>"Pro Catcher"</strong> is an exciting arcade game that challenges players to catch various mechanical parts while avoiding obstacles. With each part collected, players score points, aiming to rack up high scores without losing lives or missing parts.
+              </p>
+
+              
+              <div class="items-start justify-between gap-8 pt-4 my-8 border-t border-dashed blog-footer max-sm:space-y-3 sm:flex border-greyBlack"></div>
+              
+              
+              <h3
+                class="mt-8 mb-4 text-lg font-medium text-black dark:text-white xl:text-2xl"
+              >
+                Key Features
+              </h3>
+              <ul class="text-regular !leading-[2] list-disc ml-6 my-4">
+                <li>
+                   <strong>Unique Parts:</strong> Different mechanical parts, each with its own appearance and point value, add variety to the gameplay.
+                </li>
+                <li>
+                  <strong>Dynamic Levels:</strong> Each level grows progressively harder, keeping players on their toes.
+                </li>
+                <li>
+                  <strong>Score & Health Display:</strong> A real-time scoreboard tracks your score, lives, and missed parts.
+                </li>
+                <li>
+                  <strong>Gradual Difficulty Scaling:</strong> The game ramps up in difficulty smoothly, making it engaging as you progress.
+                </li>
+                <li>
+                  <strong>Intuitive Controls:</strong> Simple, responsive controls let players focus on catching parts and enjoying the game.
+                </li>
+              </ul>
+
+              <h3
+                class="mt-8 mb-4 text-lg font-medium text-black dark:text-white xl:text-2xl"
+              >
+              Challenges Faced
+              </h3>
+              <ul class="text-regular !leading-[2] list-disc ml-6 my-4">
+                <li>
+                   <strong>Physics Optimization:</strong> Making falling parts move naturally required careful adjustments.
+                </li>
+                <li>
+                  <strong>Balancing Gameplay:</strong> Designing a fair scoring and health system took some fine-tuning.
+                </li>
+                <li>
+                  <strong>UI Design:</strong> Crafting a visually appealing, dark-themed interface took multiple iterations.
+                </li>
+                <li>
+                  <strong>Collision Accuracy:</strong> Ensuring precise collisions between the catcher and parts to avoid unfair misses.
+                </li>
+              </ul>
+
+              <h3
+              class="mt-8 mb-4 text-lg font-medium text-black dark:text-white xl:text-2xl"
+            >
+            Game Impact
+            </h3>
+            <p>It boosts reflexes and concentration while giving a fun introduction to mechanical concepts. It’s a game that’s not only entertaining but also subtly educational, appealing to casual gamers and future engineers alike.</p>
+ 
+            <div class="items-start justify-between gap-8 pt-4 my-8 border-t border-dashed blog-footer max-sm:space-y-3 sm:flex border-greyBlack"></div>
+
+            <h3
+              class="mt-8 mb-4 text-lg font-medium text-black dark:text-white xl:text-2xl" style="color: #00ff9d; "
+            >
+            Final Thoughts
+            </h3>
+            <p>With its unique mechanics-based theme and engaging gameplay, "Pro Catcher" is fun for all ages. The game has room for future updates, like adding new parts, power-ups, or even a multiplayer mode, to keep players coming back for more.</p>
+            
+            <div class="items-start justify-between gap-8 pt-4 my-8 border-t border-dashed blog-footer max-sm:space-y-3 sm:flex border-greyBlack"></div>
+            </div>
+
+<!--after the box container------------------------------------------------------------------------------------------------------------------------------------->
+<div class="skills-section">
+  <div class="skills-header">
+    <h3 class="skills-title" style="font-size: 1.8em;">
+      <span style="color: #00ff9d; font-weight: bold;">Programming</span> 
+      <span style="font-weight: normal;">Languages</span>
+    </h3>
+    <p class="skills-description">
+      A showcase of my programming language proficiency and technical expertise in various development technologies.
+    </p>
+  </div>
+  
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-header">
+        <div class="skill-icon">
+          <!-- HTML5 Icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="#E34F26" stroke-width="2">
+            <path d="M5 3l1.5 17L12 22l5.5-2L19 3H5zm3 4h8l-.3 3.5H9.5l.2 2h5.7L15 17l-3 1-3-1-.2-2.5"/>
+          </svg>
+        </div>
+        <div class="skill-info">
+          <h4 class="skill-name">HTML</h4>
+        </div>
+      </div>
+      <div class="progress-container">
+        <div class="progress-bar" style="background: #E34F26;" data-percentage="40">
+          <span class="skill-percentage">40%</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="skill-card">
+      <div class="skill-header">
+        <div class="skill-icon">
+          <!-- CSS Icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="#264DE4" stroke-width="2">
+            <path d="M5 3l1.5 17L12 22l5.5-2L19 3H5zm9 4l-.4 4h-5l.2 2h4.6l-.4 4-2 .5-2-.5-.1-2"/>
+          </svg>
+        </div>
+        <div class="skill-info">
+          <h4 class="skill-name">CSS</h4>
+        </div>
+      </div>
+      <div class="progress-container">
+        <div class="progress-bar" style="background: #264DE4;" data-percentage="80">
+          <span class="skill-percentage">80%</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="skill-card">
+      <div class="skill-header">
+        <div class="skill-icon">
+          <!-- JavaScript Icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="#F7DF1E" stroke-width="2">
+            <path d="M3 3h18v18H3V3zm16.5 12.5c-.5 3-3 4-5.5 3.5-2-.4-3.5-2-4-3m6.5-4v4c0 1 .5 2.5 2 2.5s2-1.5 2-2.5"/>
+          </svg>
+        </div>
+        <div class="skill-info">
+          <h4 class="skill-name">JavaScript</h4>
+        </div>
+      </div>
+      <div class="progress-container">
+        <div class="progress-bar" style="background: #F7DF1E;" data-percentage="50">
+          <span class="skill-percentage">50%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-header">
+        <div class="skill-icon">
+          <!-- C++ Icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="#00599C" stroke-width="2">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            <path d="M16 8h2v3h3v2h-3v3h-2v-3h-3v-2h3V8zM8 8h2v3h3v2h-3v3H8v-3H5v-2h3V8z"/>
+          </svg>
+        </div>
+        <div class="skill-info">
+          <h4 class="skill-name">C++</h4>
+        </div>
+      </div>
+      <div class="progress-container">
+        <div class="progress-bar" style="background: #009c60;" data-percentage="50">
+          <span class="skill-percentage">50%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- only changes between these lines dont changes above or below them __________________________________________________________________________________________________________________________________________________________________________________________-->
+         
+
+
+
+
+<!-- Main Content End -->
+        </div>
+      </div>
+    </main>
+
+
+    <!-- Background Lines -->
+    <div class="bg-lines">
+      <div class="line-wrapper">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+        <div class="line4"></div>
+        <div class="line5"></div>
+        <div class="line6"></div>
+        <div class="line7"></div>
+      </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer
+      class="mx-auto KEBALKB__contentBox max-w-container xl:max-2xl:max-w-65rem"
+    >
+      <div
+        class="footer-container text-center py-6 max-w-content xl:max-2xl:max-w-50rem max-xl:mx-auto xl:ml-auto"
+      >
+        <p>
+          Copyright by
+          <a href="#" class="transition-colors">© Kebal Kishor Bastola 2024</a>
+        </p>
+      </div>
+    </footer>
+
+
+    <!-- Theme Switcher -->
+    <div
+      class="style-switcher fixed right-0 top-1/2 -translate-y-1/2 translate-x-[15rem] w-[15rem] [&.active]:translate-x-0 transition z-[9999]"
+    >
+      <div
+        class="toggle-btn absolute -left-15 w-15 h-15 bg-white dark:bg-nightBlack text-black dark:text-white flex-center cursor-pointer rounded-[.5rem_0_0_.5rem] select-none shadow-sm shadow-slate-400"
+      >
+        <span class="fal fa-cog fa-spin"></span>
+      </div>
+
+      <div
+        class="theme-select shadow-sm shadow-slate-400 px-6 py-4 bg-white dark:bg-nightBlack rounded-[0_0_0_.5rem]"
+      >
+        <h5 class="font-medium mb-2 !text-black dark:!text-white text-lg">
+          Theme Mode
+        </h5>
+        <div class="flex items-center justify-between gap-4">
+          <div
+            class="switcher-input rounded-lg text-xl flex-[1] text-center transition cursor-pointer"
+            data-theme="dark"
+          >
+            <button
+              class="border w-full px-4 py-4 flex flex-col gap-1 justify-center items-center [&.active]:bg-flashWhite [&.active]:text-black dark:text-white rounded-md"
+              id="dark_theme"
+              title="Active Dark Theme"
+            >
+              <i class="fal fa-moon"></i>
+            </button>
+          </div>
+          <div
+            class="switcher-input rounded-lg text-lg flex-[1] text-center transition cursor-pointer"
+            data-theme="light"
+          >
+            <button
+              class="border w-full px-4 py-4 flex flex-col gap-1 justify-center items-center [&.active]:bg-flashWhite [&.active]:text-black dark:text-white rounded-md"
+              id="light_theme"
+              title="Active Light Theme"
+            >
+              <i class="fal fa-sun"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<!-- Scripts -->
+    <script src="../../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/js/waypoints.min.js"></script>
+    <script src="../../assets/js/tw-elements.umd.min.js"></script>
+    <script src="../../assets/js/cd-headline.js"></script>
+    <script src="../../assets/js/jquery.counterup.min.js"></script>
+    <script src="../../assets/js/swiper-bundle.min.js"></script>
+    <script src="../../assets/js/scrollIt.min.js"></script>
+    <script src="../../assets/js/circle-progress.min.js"></script>
+    <script src="../../assets/js/script.js"></script>
+    <script src="../../assets/js/theme-mode.js"></script>
+    <script src="../../assets/js/project.js"></script>
+
+  </body>
+</html>
